@@ -10,7 +10,6 @@ public class HpComputerFactory implements ComputerFactory {
     public Mouse createMouse() {
         return new HpMouse();
     }
-
     @Override
     public Keyboard createKeyboard() {
         return new HpKeyboard();
