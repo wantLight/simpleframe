@@ -21,6 +21,7 @@ import java.util.concurrent.ConcurrentHashMap;
 public class BeanContainer {
     /**
      * 存放所有被配置标记的目标对象的Map
+     * 将目标类本身作为键，目标类的实例作为值
      */
     private final Map<Class<?>, Object> beanMap = new ConcurrentHashMap();
     /**
@@ -183,7 +184,7 @@ public class BeanContainer {
         //2.判断keySet里的元素是否是传入的接口或者类的子类，如果是，就将其添加到classSet里
         Set<Class<?>> classSet = new HashSet<>();
         for(Class<?> clazz : keySet){
-            //判断keySet里的元素是否是传入的接口或者类的子类
+            //判断keySet里的元素是否是传入的接口或者类的子类  isAssignableFrom 本身or超类
             if(interfaceOrClass.isAssignableFrom(clazz) && !clazz.equals(interfaceOrClass)){
                 classSet.add(clazz);
             }

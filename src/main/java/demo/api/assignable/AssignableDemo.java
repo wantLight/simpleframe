@@ -2,9 +2,11 @@ package demo.api.assignable;
 
 public class AssignableDemo {
     public static void main(String[] args) {
+        // isAssignableFrom 本身or超类
         System.out.println("1.FirstClass.class.isAssignableFrom(FirstClass.class) : " + FirstClass.class.isAssignableFrom(FirstClass.class));
         System.out.println("2.FirstClass.class.isAssignableFrom(SecondClass.class) : " + FirstClass.class.isAssignableFrom(SecondClass.class));
         System.out.println("3.SecondClass.class.isAssignableFrom(FirstClass.class) : " + SecondClass.class.isAssignableFrom(FirstClass.class));
+        // 继承隔了几代也是 true
         System.out.println("4.FirstClass.class.isAssignableFrom(ThirdClass.class) : " + FirstClass.class.isAssignableFrom(ThirdClass.class));
         System.out.println("5.FirstClass.class.isAssignableFrom(UnrelevantClass.class) : " + FirstClass.class.isAssignableFrom(UnrelevantClass.class));
 
