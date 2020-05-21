@@ -69,7 +69,7 @@ public class ClassUtil {
                     return true;
                 } else {
                     // class文件 - 获取绝对值路径
-                    String absoluteFilePath = fileSource.getAbsolutePath();
+                    String absoluteFilePath = pathname.getAbsolutePath();
                     if (absoluteFilePath.endsWith(".class")){
                         // 加载class
                         addToClassSet(absoluteFilePath);
