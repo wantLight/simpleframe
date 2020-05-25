@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 @Getter
 public class MainPageController {
 
+
     @Autowired
     private HeadLineShopCategoryCombineService headLineShopCategoryCombineService;
 
