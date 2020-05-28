@@ -10,5 +10,5 @@ public interface HeadLineService {
     Result<Boolean> removeHeadLine(int headLineId);
     Result<Boolean> modifyHeadLine(HeadLine headLine);
     Result<HeadLine> queryHeadLineById(int headLineId);
-    Result<List<HeadLine>>queryHeadLine(HeadLine headLineCondition,int pageIndex,int pageSize);
+    Result<List<HeadLine>> queryHeadLine(HeadLine headLineCondition, int pageIndex, int pageSize);
 }
